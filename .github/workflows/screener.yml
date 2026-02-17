@@ -1,0 +1,48 @@
+name: Daily Stock Screener
+
+on:
+  schedule:
+    # Setiap Senin-Jumat jam 11:00 UTC (18:00 WIB)
+    - cron: '0 11 * * 1-5'
+  workflow_dispatch: # Bisa dijalankan manual lewat tombol di GitHub
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 💾 Cache Data OHLC
+        uses: actions/cache@v4
+        with:
+          path: data_ohlc_v2
+          key: ${{ runner.os }}-stock-cache-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-stock-cache-
+
+      - name: 🚀 Run Screener
+        run: python screener.py
+        env:
+          PYTHONUNBUFFERED: 1
+
+      - name: 📤 Upload Result Excel
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: watchlist-result-${{ github.run_number }}
+          path: watchlist_trader_id_smc*.xlsx
+          retention-days: 7
+          if-no-files-found: ignore

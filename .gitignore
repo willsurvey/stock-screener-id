@@ -1,0 +1,27 @@
+# Cache data (JANGAN upload ke GitHub)
+data_ohlc_v2/
+*.parquet
+
+# Hasil output
+watchlist_trader_id_smc*.xlsx
+*.xlsx
+
+# Log files
+*.log
+screener.log
+
+# Python
+__pycache__/
+*.pyc
+.env
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
