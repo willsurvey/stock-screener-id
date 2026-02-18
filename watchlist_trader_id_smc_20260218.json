@@ -1,13 +1,59 @@
 {
   "status": "success",
-  "timestamp": "2026-02-18T04:45:26.009117",
+  "timestamp": "2026-02-18T11:29:10.619411",
   "date": "2026-02-18",
-  "total_saham": 0,
+  "total_saham": 3,
   "config": {
     "strategy": "MA50 Pullback + SMC",
     "min_rr": 3.0,
     "max_output": 7,
     "fundamental_required": false
   },
-  "data": []
+  "data": [
+    {
+      "No": 1,
+      "Emiten": "ASSA",
+      "Close": 1225,
+      "MA50": 1175,
+      "Vol_Ratio": 1.63,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 1110,
+      "SL": 1125,
+      "TP": 1525,
+      "RR": "1:3.0",
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) ⚠️ Pure Technical | 🎯 Entry di OB | 🟦 OB"
+    },
+    {
+      "No": 2,
+      "Emiten": "BVIC",
+      "Close": 128,
+      "MA50": 126,
+      "Vol_Ratio": 2.39,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 128,
+      "SL": 118,
+      "TP": 158,
+      "RR": "1:3.0",
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) ⚠️ Pure Technical | 🟦 OB"
+    },
+    {
+      "No": 3,
+      "Emiten": "WOOD",
+      "Close": 374,
+      "MA50": 362,
+      "Vol_Ratio": 4.56,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 324,
+      "SL": 344,
+      "TP": 464,
+      "RR": "1:3.0",
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) ⚠️ Pure Technical | 🎯 Entry di OB | 📈 BOS + 🟦 OB + ⚡ FVG"
+    }
+  ]
 }
