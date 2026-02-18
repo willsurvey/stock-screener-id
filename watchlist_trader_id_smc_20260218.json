@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "timestamp": "2026-02-18T04:45:26.009117",
+  "date": "2026-02-18",
+  "total_saham": 0,
+  "config": {
+    "strategy": "MA50 Pullback + SMC",
+    "min_rr": 3.0,
+    "max_output": 7,
+    "fundamental_required": false
+  },
+  "data": []
+}
