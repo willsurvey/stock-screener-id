@@ -78,12 +78,12 @@ CONFIG = {
     
     # --- System Configuration ---
     "MAX_WORKERS": 5,
-    "REQUEST_DELAY": 1.5,
-    "JITTER_MIN": 0.3,
-    "JITTER_MAX": 0.8,
-    "MAX_RETRIES": 3,
-    "BATCH_SIZE": 20,
-    "BATCH_DELAY": 8,
+    "REQUEST_DELAY": 0.7,
+    "JITTER_MIN": 0.2,
+    "JITTER_MAX": 0.5,
+    "MAX_RETRIES": 2,
+    "BATCH_SIZE": 30,
+    "BATCH_DELAY": 5,
     "DATA_DIR": "data_ohlc_v2",
     "MAX_LOCAL_AGE_DAYS": 1,
     "MIN_CACHE_RETENTION_DAYS": 365,
