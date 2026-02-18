@@ -2,9 +2,11 @@ name: Daily Stock Screener
 
 on:
   schedule:
+    # Setiap Senin-Jumat jam 11:00 UTC (18:00 WIB)
     - cron: '0 11 * * 1-5'
-  workflow_dispatch:
+  workflow_dispatch: # Bisa dijalankan manual lewat tombol di GitHub
 
+# ✅ PENTING: Tambah permissions untuk write access
 permissions:
   contents: write
 
@@ -17,12 +19,12 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # ✅ Penting untuk push commit
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.13'  # ✅ Python 3.10 (paling stabil untuk pandas_ta)
 
       - name: 📦 Install Dependencies
         run: |
@@ -51,7 +53,6 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      # ✅ UPDATED STEP INI
       - name: 📤 Commit & Push JSON Results
         if: success()
         run: |
@@ -59,11 +60,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add latest_screening.json
           git add watchlist_trader_id_smc_*.json
-          
-          # ✅ Pull dulu untuk hindari conflict
-          git pull --rebase origin main || echo "No remote changes to pull"
-          
           git commit -m "📊 Update screening results $(date +%Y%m%d)" || echo "No changes to commit"
-          git push origin main
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
