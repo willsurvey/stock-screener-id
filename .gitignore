@@ -1,27 +1,57 @@
-# Cache data (JANGAN upload ke GitHub)
+# =============================================
+# CACHE DATA (JANGAN upload ke GitHub)
+# =============================================
 data_ohlc_v2/
 *.parquet
 
-# Hasil output
+# =============================================
+# HASIL OUTPUT
+# =============================================
+# ✅ Excel files - DI-IGNORE (untuk download manual via Artifact)
 watchlist_trader_id_smc*.xlsx
 *.xlsx
 
-# Log files
+# ❌ JSON files - JANGAN DI-IGNORE (untuk API Endpoint, harus di-commit!)
+# latest_screening.json  ← TIDAK MASUK .gitignore
+# watchlist_*.json       ← TIDAK MASUK .gitignore
+
+# =============================================
+# LOG FILES
+# =============================================
 *.log
 screener.log
 
-# Python
+# =============================================
+# PYTHON
+# =============================================
 __pycache__/
 *.pyc
 .env
 *.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
 
-# IDE
+# =============================================
+# IDE & EDITOR
+# =============================================
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+.project
+.pydevproject
+.settings/
 
-# OS
+# =============================================
+# OS FILES
+# =============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db

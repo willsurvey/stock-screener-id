@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SCREENER TRADER INDONESIA - VERSI GITHUB ACTIONS
+SCREENER TRADER INDONESIA - VERSI GITHUB ACTIONS + API ENDPOINT
 ✅ DOWNLOAD: period="max" → SEMUA data dari IPO sampai hari ini
 ✅ FILTER: Hanya hari dengan volume > 0 (hapus noise sebelum listing)
 ✅ STRATEGI: Pullback dalam UPTREND (harga > MA50) + SMC Confirmation
@@ -11,6 +11,7 @@ SCREENER TRADER INDONESIA - VERSI GITHUB ACTIONS
 ✅ PEMBULATAN: 100% sesuai fraksi BEI
 ✅ CONCURRENT DOWNLOAD (5 workers) + Local Cache (Parquet) + Audit Report
 ✅ GITHUB ACTIONS READY: No input(), Auto-exit
+✅ API ENDPOINT: Save JSON untuk akses programmatic
 """
 import yfinance as yf
 import pandas as pd
@@ -21,6 +22,7 @@ import time
 import os
 import sys
 import re
+import json
 from tabulate import tabulate
 from colorama import init, Fore, Style
 import gc
@@ -748,6 +750,44 @@ def clean_old_data(max_age_days=365):
                     pass
     return total_deleted
 
+# =============================================
+# ✅ FUNGSI BARU: SAVE JSON RESULT (API ENDPOINT)
+# =============================================
+def save_json_result(results, filename):
+    """Save hasil screening ke JSON untuk API"""
+    try:
+        # Bersihkan data untuk JSON (hapus sort_key yang tidak perlu)
+        clean_results = []
+        for r in results:
+            clean_r = {k: v for k, v in r.items() if k != 'sort_key'}
+            clean_results.append(clean_r)
+        
+        json_data = {
+            "status": "success",
+            "timestamp": datetime.now().isoformat(),
+            "date": datetime.now().strftime("%Y-%m-%d"),
+            "total_saham": len(results),
+            "config": {
+                "strategy": "MA50 Pullback + SMC",
+                "min_rr": CONFIG["MIN_RR_RATIO"],
+                "max_output": CONFIG["MAX_OUTPUT"],
+                "fundamental_required": CONFIG["FUNDAMENTAL_REQUIRED"]
+            },
+            "data": clean_results
+        }
+        
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, indent=2, ensure_ascii=False)
+        
+        log_message(f"💾 Hasil JSON disimpan ke: {filename}", "success")
+        return True
+    except Exception as e:
+        log_message(f"❌ Gagal simpan JSON: {str(e)}", "error")
+        return False
+
+# =============================================
+# FUNGSI MAIN
+# =============================================
 def main():
     start_time = time.time()
     today_str = datetime.now().strftime("%Y%m%d")
@@ -853,9 +893,14 @@ def main():
         table_colored = table.replace("✅ READY", f"{Fore.GREEN}✅ READY{Style.RESET_ALL}")
         print(table_colored + "\n")
         
+        # Save Excel (dated filename)
         excel_filename = f"{CONFIG['EXCEL_PREFIX']}_{today_str}.xlsx"
         df_results.to_excel(excel_filename, index=False)
-        log_message(f"💾 Hasil disimpan ke: {excel_filename}", "success")
+        log_message(f"💾 Hasil Excel disimpan ke: {excel_filename}", "success")
+        
+        # ✅ SAVE JSON (2 FILE: STABLE + DATED)
+        save_json_result(results, "latest_screening.json")  # URL API stabil
+        save_json_result(results, f"{CONFIG['EXCEL_PREFIX']}_{today_str}.json")  # History
         
         unknown_fund = sum(1 for r in results if "SKIP" in r["Info"] or "UNKNOWN" in r["Info"])
         if unknown_fund > 0:
@@ -866,6 +911,10 @@ def main():
         log_message("💡 Normal! Pasar tidak selalu menyediakan setup valid. Hold cash besok.", "info")
         if CONFIG["FUNDAMENTAL_REQUIRED"]:
             log_message("💡 Tips: Coba set FUNDAMENTAL_REQUIRED = False untuk hasil lebih banyak", "info")
+        
+        # ✅ Tetap save JSON meski kosong (untuk API consistency)
+        save_json_result([], "latest_screening.json")
+        save_json_result([], f"{CONFIG['EXCEL_PREFIX']}_{today_str}.json")
     
     deleted_files = clean_old_data(max_age_days=CONFIG["MIN_CACHE_RETENTION_DAYS"])
     if deleted_files > 0:
@@ -888,6 +937,7 @@ if __name__ == "__main__":
         print("   Data dari IPO + MA50 Pullback + SMC Confirmation (BOS/OB/FVG)")
         print(f"   Fundamental: {'WAJIB' if CONFIG['FUNDAMENTAL_REQUIRED'] else 'OPTIONAL (Pure Technical)'}")
         print("   Cache Check: Berdasarkan Tanggal Data (Bukan Tanggal File)")
+        print("   API Endpoint: latest_screening.json (URL Stabil)")
         print("="*80 + f"{Style.RESET_ALL}\n")
         main()
         # ✅ PENTING: Exit dengan kode 0 agar GitHub Actions menganggap sukses

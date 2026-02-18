@@ -14,11 +14,13 @@ jobs:
     steps:
       - name: 📥 Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # ✅ Penting untuk push commit
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'  # ✅ FIXED: Python 3.11
+          python-version: '3.13'  # ✅ Python 3.10 (paling stabil untuk pandas_ta)
 
       - name: 📦 Install Dependencies
         run: |
@@ -42,7 +44,19 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: watchlist-result-${{ github.run_number }}
+          name: watchlist-excel-${{ github.run_number }}
           path: watchlist_trader_id_smc*.xlsx
           retention-days: 7
           if-no-files-found: ignore
+
+      - name: 📤 Commit & Push JSON Results
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add latest_screening.json
+          git add watchlist_trader_id_smc_*.json
+          git commit -m "📊 Update screening results $(date +%Y%m%d %H:%M)" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
