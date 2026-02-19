@@ -11,7 +11,7 @@ permissions:
 jobs:
   screen:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 100
     
     steps:
       - name: 📥 Checkout Code
