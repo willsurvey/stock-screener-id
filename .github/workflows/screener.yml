@@ -15,7 +15,6 @@ on:
 # ✅ FIX 1: Tambah workflows permission
 permissions:
   contents: write
-  workflows: write
 
 jobs:
   screen:
