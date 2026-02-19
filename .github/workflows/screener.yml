@@ -2,8 +2,15 @@ name: Daily Stock Screener
 
 on:
   schedule:
-    - cron: '0 11 * * 1-5'
-  workflow_dispatch:
+    # Senin-Kamis: 12:01 WIB (05:01 UTC)
+    - cron: '1 5 * * 1-4'
+    # Senin-Kamis: 16:30 WIB (09:30 UTC)
+    - cron: '30 9 * * 1-4'
+    # Jumat: 11:31 WIB (04:31 UTC)
+    - cron: '31 4 * * 5'
+    # Jumat: 16:30 WIB (09:30 UTC)
+    - cron: '30 9 * * 5'
+  workflow_dispatch: # Bisa dijalankan manual
 
 permissions:
   contents: write
@@ -22,7 +29,7 @@ jobs:
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.13'  # ✅ Python 3.13 (sesuai preferensi Anda)
 
       - name: 📦 Install Dependencies
         run: |
