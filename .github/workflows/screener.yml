@@ -4,9 +4,8 @@ on:
   schedule:
     # Setiap Senin-Jumat jam 11:00 UTC (18:00 WIB)
     - cron: '0 11 * * 1-5'
-  workflow_dispatch: # Bisa dijalankan manual lewat tombol di GitHub
+  workflow_dispatch:
 
-# ✅ PENTING: Tambah permissions untuk write access
 permissions:
   contents: write
 
@@ -19,12 +18,12 @@ jobs:
       - name: 📥 Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # ✅ Penting untuk push commit
+          fetch-depth: 0
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'  # ✅ FIXED: Python 3.10 (bukan 3.13)
+          python-version: '3.13'  # ✅ HARUS 3.10, BUKAN 3.13
 
       - name: 📦 Install Dependencies
         run: |
@@ -53,10 +52,9 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      # ✅ FIXED: Gunakan git-auto-commit-action (lebih stabil, handle conflict otomatis)
       - name: 📤 Commit & Push JSON Results
         if: success()
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v5  # ✅ Ini action, bukan run:
         with:
           commit_message: "📊 Update screening results"
           file_pattern: "latest_screening.json watchlist_trader_id_smc_*.json"
