@@ -24,7 +24,7 @@ jobs:
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'  # ✅ Python 3.10 (paling stabil untuk pandas_ta)
+          python-version: '3.13'  # ✅ FIXED: Python 3.10 (bukan 3.13)
 
       - name: 📦 Install Dependencies
         run: |
@@ -53,14 +53,14 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
+      # ✅ FIXED: Gunakan git-auto-commit-action (lebih stabil, handle conflict otomatis)
       - name: 📤 Commit & Push JSON Results
         if: success()
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add latest_screening.json
-          git add watchlist_trader_id_smc_*.json
-          git commit -m "📊 Update screening results $(date +%Y%m%d)" || echo "No changes to commit"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "📊 Update screening results"
+          file_pattern: "latest_screening.json watchlist_trader_id_smc_*.json"
+          commit_user_name: GitHub Action
+          commit_user_email: action@github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
