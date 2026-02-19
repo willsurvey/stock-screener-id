@@ -2,7 +2,6 @@ name: Daily Stock Screener
 
 on:
   schedule:
-    # Setiap Senin-Jumat jam 11:00 UTC (18:00 WIB)
     - cron: '0 11 * * 1-5'
   workflow_dispatch:
 
@@ -23,7 +22,7 @@ jobs:
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'  # ✅ HARUS 3.10, BUKAN 3.13
+          python-version: '3.13'
 
       - name: 📦 Install Dependencies
         run: |
@@ -52,13 +51,15 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
+      # ✅ FINAL FIX: Pull before push
       - name: 📤 Commit & Push JSON Results
         if: success()
-        uses: stefanzweifel/git-auto-commit-action@v5  # ✅ Ini action, bukan run:
-        with:
-          commit_message: "📊 Update screening results"
-          file_pattern: "latest_screening.json watchlist_trader_id_smc_*.json"
-          commit_user_name: GitHub Action
-          commit_user_email: action@github.com
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add latest_screening.json watchlist_trader_id_smc_*.json
+          git pull --rebase origin main || echo "No remote changes"
+          git commit -m "📊 Update screening results $(date +%Y%m%d)" || echo "No changes"
+          git push origin main --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
