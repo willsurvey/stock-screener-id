@@ -1,4 +1,18 @@
 # =============================================
+# NODE MODULES (WAJIB!)
+# =============================================
+node_modules/
+.pnp
+.pnp.js
+
+# =============================================
+# NEXT.JS
+# =============================================
+.next/
+out/
+*.log
+
+# =============================================
 # CACHE DATA (JANGAN upload ke GitHub)
 # =============================================
 data_ohlc_v2/
@@ -7,13 +21,10 @@ data_ohlc_v2/
 # =============================================
 # HASIL OUTPUT
 # =============================================
-# ✅ Excel files - DI-IGNORE (untuk download manual via Artifact)
 watchlist_trader_id_smc*.xlsx
 *.xlsx
-
-# ❌ JSON files - JANGAN DI-IGNORE (untuk API Endpoint, harus di-commit!)
-# latest_screening.json  ← TIDAK MASUK .gitignore
-# watchlist_*.json       ← TIDAK MASUK .gitignore
+latest_screening.json
+watchlist_trader_id_smc_*.json
 
 # =============================================
 # LOG FILES
