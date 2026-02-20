@@ -1,18 +1,13 @@
 name: Daily Stock Screener
 
 on:
-  schedule:
-    # Senin-Kamis: 12:01 WIB (05:01 UTC)
-    - cron: '1 5 * * 1-4'
-    # Senin-Kamis: 16:30 WIB (09:30 UTC)
-    - cron: '30 9 * * 1-4'
-    # Jumat: 11:31 WIB (04:31 UTC)
-    - cron: '31 4 * * 5'
-    # Jumat: 16:30 WIB (09:30 UTC)
-    - cron: '30 9 * * 5'
-  workflow_dispatch:
+  workflow_dispatch:  # ✅ Hanya trigger manual (dari Vercel)
+    inputs:
+      trigger_source:
+        description: 'Trigger source'
+        required: false
+        default: 'vercel-cron'
 
-# ✅ FIX 1: Tambah workflows permission
 permissions:
   contents: write
 
@@ -59,23 +54,14 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-      # ✅ FIX 2: Commit sebelum pull, exclude workflow file
       - name: 📤 Commit & Push JSON Results
         if: success()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Add hanya file JSON (exclude workflow)
           git add latest_screening.json watchlist_trader_id_smc_*.json
-          
-          # Commit dulu sebelum pull
           git commit -m "📊 Update screening results $(date +%Y%m%d)" || echo "No changes to commit"
-          
-          # Baru pull (setelah commit)
           git pull --rebase origin main || echo "No remote changes"
-          
-          # Push dengan force
           git push origin main --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
