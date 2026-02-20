@@ -35,8 +35,7 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           ref: 'main',
           inputs: {
-            trigger_source: 'vercel-cron',
-            triggered_at: new Date().toISOString()
+            trigger_source: 'vercel-cron'
           }
         }),
       }
