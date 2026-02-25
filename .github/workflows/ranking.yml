@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
@@ -26,7 +27,7 @@ jobs:
       - name: 📦 Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests pandas
+          pip install requests pandas openpyxl
 
       - name: 🚀 Run Ranker
         env:
@@ -39,9 +40,18 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ranked_screening.json history/*.json
-          git commit -m "📊 Update ranking results $(date +%Y%m%d)" || echo "No changes to commit"
-          git pull --rebase origin main || echo "No remote changes"
-          git push origin main
+          
+          # Hanya commit file yang benar-benar berubah
+          git add ranked_screening.json
+          
+          # Check if there are changes to commit
+          if ! git diff --staged --quiet; then
+            git commit -m "📊 Update ranking results $(date +%Y%m%d)"
+            git pull --rebase origin main
+            git push origin main
+            echo "✅ Results pushed successfully"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
