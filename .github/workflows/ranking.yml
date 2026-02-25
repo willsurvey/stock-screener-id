@@ -1,0 +1,47 @@
+name: Stock Ranking with Empirical Hit Rate
+
+on:
+  workflow_run:
+    workflows: ["Daily Stock Screener"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  rank-stocks:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas
+
+      - name: 🚀 Run Ranker
+        env:
+          STOCKBIT_BEARER_TOKEN: ${{ secrets.STOCKBIT_BEARER_TOKEN }}
+          PYTHONUNBUFFERED: 1
+        run: python scripts/ranker.py
+
+      - name: 📤 Commit & Push Results
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ranked_screening.json history/*.json
+          git commit -m "📊 Update ranking results $(date +%Y%m%d)" || echo "No changes to commit"
+          git pull --rebase origin main || echo "No remote changes"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
