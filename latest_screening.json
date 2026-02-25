@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "timestamp": "2026-02-25T10:39:10.386296",
+  "timestamp": "2026-02-25T23:53:42.466294",
   "date": "2026-02-25",
   "total_saham": 5,
   "config": {
@@ -89,7 +89,7 @@
         "Trend_Bias": "BULLISH",
         "Strong_Low": 566.6476909930889,
         "Weak_High": 643.7118722098214,
-        "OB_Count": 6,
+        "OB_Count": 7,
         "FVG_Count": 18
       }
     },
@@ -163,7 +163,7 @@
         "Trend_Bias": "NEUTRAL",
         "Strong_Low": null,
         "Weak_High": null,
-        "OB_Count": 11,
+        "OB_Count": 10,
         "FVG_Count": 67
       }
     },
