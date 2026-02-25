@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-02-25T19:12:15.973733Z",
+  "timestamp": "2026-02-25T23:54:20.413138Z",
   "date": "2026-02-25",
-  "time": "19.12 WIB",
+  "time": "23.54 WIB",
   "total_saham": 5,
   "config": {
     "strategy": "LuxAlgo Maximum SMC + Empirical Hit Rate Ranking",
@@ -80,7 +80,7 @@
         "direction_1d": "SELL",
         "direction_1w": "SELL"
       },
-      "ranked_at": "2026-02-25T19:12:08.623301Z",
+      "ranked_at": "2026-02-25T23:54:12.599250Z",
       "data_points": 38,
       "Rank": 1
     },
@@ -117,7 +117,7 @@
         "Trend_Bias": "BULLISH",
         "Strong_Low": 566.6476909930889,
         "Weak_High": 643.7118722098214,
-        "OB_Count": 6,
+        "OB_Count": 7,
         "FVG_Count": 18
       },
       "ranking": {
@@ -142,7 +142,7 @@
         "direction_1d": "BUY",
         "direction_1w": "BUY"
       },
-      "ranked_at": "2026-02-25T19:12:10.354559Z",
+      "ranked_at": "2026-02-25T23:54:14.634218Z",
       "data_points": 38,
       "Rank": 2
     },
@@ -204,7 +204,7 @@
         "direction_1d": "SELL",
         "direction_1w": "SELL"
       },
-      "ranked_at": "2026-02-25T19:12:12.104997Z",
+      "ranked_at": "2026-02-25T23:54:16.668127Z",
       "data_points": 38,
       "Rank": 3
     },
@@ -241,7 +241,7 @@
         "Trend_Bias": "NEUTRAL",
         "Strong_Low": null,
         "Weak_High": null,
-        "OB_Count": 11,
+        "OB_Count": 10,
         "FVG_Count": 67
       },
       "ranking": {
@@ -266,7 +266,7 @@
         "direction_1d": "BUY",
         "direction_1w": "BUY"
       },
-      "ranked_at": "2026-02-25T19:12:13.852348Z",
+      "ranked_at": "2026-02-25T23:54:18.370989Z",
       "data_points": 38,
       "Rank": 4
     },
@@ -328,7 +328,7 @@
         "direction_1d": "SELL",
         "direction_1w": "SELL"
       },
-      "ranked_at": "2026-02-25T19:12:15.973543Z",
+      "ranked_at": "2026-02-25T23:54:20.412906Z",
       "data_points": 38,
       "Rank": 5
     }
