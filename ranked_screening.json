@@ -1,9 +1,9 @@
 {
   "status": "success",
-  "timestamp": "2026-02-26T10:42:25.658500Z",
-  "date": "2026-02-26",
-  "time": "10.42 WIB",
-  "total_saham": 7,
+  "timestamp": "2026-02-27T05:56:45.926450Z",
+  "date": "2026-02-27",
+  "time": "05.56 WIB",
+  "total_saham": 1,
   "config": {
     "strategy": "LuxAlgo Maximum SMC + Empirical Hit Rate Ranking",
     "min_rr": 3.0,
@@ -14,52 +14,52 @@
     "foreign_threshold": 10000000000
   },
   "summary": {
-    "total_screened": 7,
-    "total_ranked": 7,
+    "total_screened": 1,
+    "total_ranked": 1,
     "high_confidence": 0,
     "moderate_confidence": 0,
-    "low_confidence": 7,
+    "low_confidence": 1,
     "failed": 0
   },
   "stocks": [
     {
       "No": 1,
-      "Emiten": "YOII",
-      "Company_Name": "PT YOII TBK",
-      "Close": 106,
-      "MA50": 104,
-      "Vol_Ratio": 1.55,
+      "Emiten": "INCF",
+      "Company_Name": "PT INCF TBK",
+      "Close": 73,
+      "MA50": 70,
+      "Vol_Ratio": 5.15,
       "ROE": "N/A",
       "DE": "N/A",
-      "Entry": 94,
-      "Entry_Zone": "85 - 106",
-      "SL": 89,
-      "TP": 184,
-      "TP_1": 148,
-      "TP_2": 160,
-      "TP_3": 184,
-      "RR": "1:18.0",
-      "RR_Value": 18.0,
+      "Entry": 19,
+      "Entry_Zone": "18 - 20",
+      "SL": 17,
+      "TP": 91,
+      "TP_1": 73,
+      "TP_2": 79,
+      "TP_3": 91,
+      "RR": "1:36.0",
+      "RR_Value": 36.0,
       "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
+      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
       "Entry_Details": {
-        "Entry_1": 106,
-        "Entry_2": 95,
-        "Entry_3": 85,
+        "Entry_1": 20,
+        "Entry_2": 19,
+        "Entry_3": 18,
         "Pct_1": 20,
         "Pct_2": 50,
         "Pct_3": 30
       },
       "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 2,
-        "FVG_Count": 2
+        "Trend_Bias": "BULLISH",
+        "Strong_Low": 18.0,
+        "Weak_High": 72.0,
+        "OB_Count": 4,
+        "FVG_Count": 106
       },
       "ranking": {
-        "confidence_score": 18,
+        "confidence_score": 0,
         "tier": "LOW",
         "empirical_hit_rate": null,
         "hit_rate_signals": 0,
@@ -67,387 +67,21 @@
         "breakdown": [
           "❌ Very low liquidity (<500K lots)",
           "❌ Minimal foreign participation",
-          "🟡 Limited signal data, using consistency: 92%"
+          "🟡 Limited signal data, using consistency: 0%"
         ]
       },
       "foreign_flow": {
         "net_foreign_1d": 0,
-        "net_foreign_1w": -178984400,
+        "net_foreign_1w": 0,
         "net_foreign_1d_formatted": "Rp0",
-        "net_foreign_1w_formatted": "Rp-178.98M",
+        "net_foreign_1w_formatted": "Rp0",
         "trend_1w": "NEUTRAL",
         "direction_1d": "NEUTRAL",
-        "direction_1w": "SELL"
+        "direction_1w": "NEUTRAL"
       },
-      "ranked_at": "2026-02-26T10:42:14.872995Z",
-      "data_points": 39,
+      "ranked_at": "2026-02-27T05:56:45.926231Z",
+      "data_points": 40,
       "Rank": 1
-    },
-    {
-      "No": 2,
-      "Emiten": "SIDO",
-      "Company_Name": "PT SIDO TBK",
-      "Close": 540,
-      "MA50": 535,
-      "Vol_Ratio": 2.21,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 498,
-      "Entry_Zone": "474 - 530",
-      "SL": 476,
-      "TP": 700,
-      "TP_1": 565,
-      "TP_2": 610,
-      "TP_3": 700,
-      "RR": "1:9.2",
-      "RR_Value": 9.18,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
-      "Entry_Details": {
-        "Entry_1": 530,
-        "Entry_2": 500,
-        "Entry_3": 474,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 12,
-        "FVG_Count": 52
-      },
-      "ranking": {
-        "confidence_score": 18,
-        "tier": "LOW",
-        "empirical_hit_rate": null,
-        "hit_rate_signals": 0,
-        "hit_rate_success": 0,
-        "breakdown": [
-          "❌ Very low liquidity (<500K lots)",
-          "❌ Minimal foreign participation",
-          "🟡 Limited signal data, using consistency: 92%"
-        ]
-      },
-      "foreign_flow": {
-        "net_foreign_1d": 0,
-        "net_foreign_1w": 4991671000,
-        "net_foreign_1d_formatted": "Rp0",
-        "net_foreign_1w_formatted": "+Rp4.99B",
-        "trend_1w": "NEUTRAL",
-        "direction_1d": "NEUTRAL",
-        "direction_1w": "BUY"
-      },
-      "ranked_at": "2026-02-26T10:42:16.638610Z",
-      "data_points": 39,
-      "Rank": 2
-    },
-    {
-      "No": 3,
-      "Emiten": "BNGA",
-      "Company_Name": "PT BNGA TBK",
-      "Close": 1865,
-      "MA50": 1820,
-      "Vol_Ratio": 1.57,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 1540,
-      "Entry_Zone": "1480 - 1610",
-      "SL": 1375,
-      "TP": 2310,
-      "TP_1": 1865,
-      "TP_2": 2010,
-      "TP_3": 2310,
-      "RR": "1:4.7",
-      "RR_Value": 4.67,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
-      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
-      "Entry_Details": {
-        "Entry_1": 1610,
-        "Entry_2": 1545,
-        "Entry_3": 1480,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "BULLISH",
-        "Strong_Low": 1419.875186920166,
-        "Weak_High": 1830.0,
-        "OB_Count": 23,
-        "FVG_Count": 79
-      },
-      "ranking": {
-        "confidence_score": 18,
-        "tier": "LOW",
-        "empirical_hit_rate": null,
-        "hit_rate_signals": 0,
-        "hit_rate_success": 0,
-        "breakdown": [
-          "❌ Very low liquidity (<500K lots)",
-          "❌ Minimal foreign participation",
-          "🟡 Limited signal data, using consistency: 92%"
-        ]
-      },
-      "foreign_flow": {
-        "net_foreign_1d": 0,
-        "net_foreign_1w": -2958889500,
-        "net_foreign_1d_formatted": "Rp0",
-        "net_foreign_1w_formatted": "Rp-2.96B",
-        "trend_1w": "NEUTRAL",
-        "direction_1d": "NEUTRAL",
-        "direction_1w": "SELL"
-      },
-      "ranked_at": "2026-02-26T10:42:18.400414Z",
-      "data_points": 39,
-      "Rank": 3
-    },
-    {
-      "No": 4,
-      "Emiten": "TOBA",
-      "Company_Name": "PT TOBA TBK",
-      "Close": 770,
-      "MA50": 770,
-      "Vol_Ratio": 3.52,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 715,
-      "Entry_Zone": "670 - 770",
-      "SL": 565,
-      "TP": 1230,
-      "TP_1": 995,
-      "TP_2": 1070,
-      "TP_3": 1230,
-      "RR": "1:3.4",
-      "RR_Value": 3.43,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
-      "Entry_Details": {
-        "Entry_1": 770,
-        "Entry_2": 720,
-        "Entry_3": 670,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 11,
-        "FVG_Count": 87
-      },
-      "ranking": {
-        "confidence_score": 18,
-        "tier": "LOW",
-        "empirical_hit_rate": null,
-        "hit_rate_signals": 0,
-        "hit_rate_success": 0,
-        "breakdown": [
-          "❌ Very low liquidity (<500K lots)",
-          "❌ Minimal foreign participation",
-          "🟡 Limited signal data, using consistency: 92%"
-        ]
-      },
-      "foreign_flow": {
-        "net_foreign_1d": 0,
-        "net_foreign_1w": -9949708500,
-        "net_foreign_1d_formatted": "Rp0",
-        "net_foreign_1w_formatted": "Rp-9.95B",
-        "trend_1w": "NEUTRAL",
-        "direction_1d": "NEUTRAL",
-        "direction_1w": "SELL"
-      },
-      "ranked_at": "2026-02-26T10:42:20.174227Z",
-      "data_points": 39,
-      "Rank": 4
-    },
-    {
-      "No": 6,
-      "Emiten": "GWSA",
-      "Company_Name": "PT GWSA TBK",
-      "Close": 191,
-      "MA50": 186,
-      "Vol_Ratio": 3.02,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 159,
-      "Entry_Zone": "144 - 178",
-      "SL": 126,
-      "TP": 258,
-      "TP_1": 190,
-      "TP_2": 204,
-      "TP_3": 258,
-      "RR": "1:3.0",
-      "RR_Value": 3.0,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
-      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
-      "Entry_Details": {
-        "Entry_1": 178,
-        "Entry_2": 161,
-        "Entry_3": 144,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "BULLISH",
-        "Strong_Low": 130.0,
-        "Weak_High": 186.0,
-        "OB_Count": 12,
-        "FVG_Count": 41
-      },
-      "ranking": {
-        "confidence_score": 18,
-        "tier": "LOW",
-        "empirical_hit_rate": null,
-        "hit_rate_signals": 0,
-        "hit_rate_success": 0,
-        "breakdown": [
-          "❌ Very low liquidity (<500K lots)",
-          "❌ Minimal foreign participation",
-          "🟡 Limited signal data, using consistency: 92%"
-        ]
-      },
-      "foreign_flow": {
-        "net_foreign_1d": 0,
-        "net_foreign_1w": 155779400,
-        "net_foreign_1d_formatted": "Rp0",
-        "net_foreign_1w_formatted": "+Rp155.78M",
-        "trend_1w": "NEUTRAL",
-        "direction_1d": "NEUTRAL",
-        "direction_1w": "BUY"
-      },
-      "ranked_at": "2026-02-26T10:42:23.899546Z",
-      "data_points": 39,
-      "Rank": 5
-    },
-    {
-      "No": 5,
-      "Emiten": "BNII",
-      "Company_Name": "PT BNII TBK",
-      "Close": 226,
-      "MA50": 216,
-      "Vol_Ratio": 3.67,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 216,
-      "Entry_Zone": "206 - 226",
-      "SL": 175,
-      "TP": 340,
-      "TP_1": 240,
-      "TP_2": 260,
-      "TP_3": 340,
-      "RR": "1:3.0",
-      "RR_Value": 3.02,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
-      "Entry_Details": {
-        "Entry_1": 226,
-        "Entry_2": 216,
-        "Entry_3": 206,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 11,
-        "FVG_Count": 67
-      },
-      "ranking": {
-        "confidence_score": 13,
-        "tier": "LOW",
-        "empirical_hit_rate": null,
-        "hit_rate_signals": 0,
-        "hit_rate_success": 0,
-        "breakdown": [
-          "❌ Very low liquidity (<500K lots)",
-          "❌ Minimal foreign participation",
-          "🟡 Limited signal data, using consistency: 67%"
-        ]
-      },
-      "foreign_flow": {
-        "net_foreign_1d": 0,
-        "net_foreign_1w": 261333800,
-        "net_foreign_1d_formatted": "Rp0",
-        "net_foreign_1w_formatted": "+Rp261.33M",
-        "trend_1w": "NEUTRAL",
-        "direction_1d": "NEUTRAL",
-        "direction_1w": "BUY"
-      },
-      "ranked_at": "2026-02-26T10:42:22.138244Z",
-      "data_points": 39,
-      "Rank": 6
-    },
-    {
-      "No": 7,
-      "Emiten": "PAMG",
-      "Company_Name": "PT PAMG TBK",
-      "Close": 70,
-      "MA50": 69,
-      "Vol_Ratio": 5.19,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 80,
-      "Entry_Zone": "69 - 94",
-      "SL": 55,
-      "TP": 155,
-      "TP_1": 103,
-      "TP_2": 111,
-      "TP_3": 155,
-      "RR": "1:3.0",
-      "RR_Value": 3.0,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
-      "Entry_Details": {
-        "Entry_1": 94,
-        "Entry_2": 82,
-        "Entry_3": 69,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 3,
-        "FVG_Count": 6
-      },
-      "ranking": {
-        "confidence_score": 13,
-        "tier": "LOW",
-        "empirical_hit_rate": null,
-        "hit_rate_signals": 0,
-        "hit_rate_success": 0,
-        "breakdown": [
-          "❌ Very low liquidity (<500K lots)",
-          "❌ Minimal foreign participation",
-          "🟡 Limited signal data, using consistency: 67%"
-        ]
-      },
-      "foreign_flow": {
-        "net_foreign_1d": 0,
-        "net_foreign_1w": -39682300,
-        "net_foreign_1d_formatted": "Rp0",
-        "net_foreign_1w_formatted": "Rp-39.68M",
-        "trend_1w": "NEUTRAL",
-        "direction_1d": "NEUTRAL",
-        "direction_1w": "SELL"
-      },
-      "ranked_at": "2026-02-26T10:42:25.658290Z",
-      "data_points": 39,
-      "Rank": 7
     }
   ]
 }
