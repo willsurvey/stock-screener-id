@@ -1,9 +1,9 @@
 {
   "status": "success",
-  "timestamp": "2026-02-27T05:56:45.926450Z",
+  "timestamp": "2026-02-27T10:47:07.716359Z",
   "date": "2026-02-27",
-  "time": "05.56 WIB",
-  "total_saham": 1,
+  "time": "10.47 WIB",
+  "total_saham": 2,
   "config": {
     "strategy": "LuxAlgo Maximum SMC + Empirical Hit Rate Ranking",
     "min_rr": 3.0,
@@ -14,35 +14,97 @@
     "foreign_threshold": 10000000000
   },
   "summary": {
-    "total_screened": 1,
-    "total_ranked": 1,
+    "total_screened": 2,
+    "total_ranked": 2,
     "high_confidence": 0,
     "moderate_confidence": 0,
-    "low_confidence": 1,
+    "low_confidence": 2,
     "failed": 0
   },
   "stocks": [
     {
+      "No": 2,
+      "Emiten": "GWSA",
+      "Company_Name": "PT GWSA TBK",
+      "Close": 191,
+      "MA50": 186,
+      "Vol_Ratio": 2.78,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 159,
+      "Entry_Zone": "144 - 178",
+      "SL": 126,
+      "TP": 258,
+      "TP_1": 190,
+      "TP_2": 204,
+      "TP_3": 258,
+      "RR": "1:3.0",
+      "RR_Value": 3.0,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
+      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
+      "Entry_Details": {
+        "Entry_1": 178,
+        "Entry_2": 161,
+        "Entry_3": 144,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "BULLISH",
+        "Strong_Low": 130.0,
+        "Weak_High": 186.0,
+        "OB_Count": 12,
+        "FVG_Count": 41
+      },
+      "ranking": {
+        "confidence_score": 30,
+        "tier": "LOW",
+        "empirical_hit_rate": null,
+        "hit_rate_signals": 0,
+        "hit_rate_success": 0,
+        "breakdown": [
+          "❌ Very low liquidity (<500K lots)",
+          "❌ Minimal foreign participation",
+          "🟡 Limited signal data, using consistency: 100%",
+          "✅ Recent foreign activity"
+        ]
+      },
+      "foreign_flow": {
+        "net_foreign_1d": 113321500,
+        "net_foreign_1w": 417423500,
+        "net_foreign_1d_formatted": "+Rp113.32M",
+        "net_foreign_1w_formatted": "+Rp417.42M",
+        "trend_1w": "NEUTRAL",
+        "direction_1d": "BUY",
+        "direction_1w": "BUY"
+      },
+      "ranked_at": "2026-02-27T10:47:07.716112Z",
+      "data_points": 40,
+      "Rank": 1
+    },
+    {
       "No": 1,
       "Emiten": "INCF",
       "Company_Name": "PT INCF TBK",
-      "Close": 73,
+      "Close": 71,
       "MA50": 70,
-      "Vol_Ratio": 5.15,
+      "Vol_Ratio": 6.75,
       "ROE": "N/A",
       "DE": "N/A",
       "Entry": 19,
       "Entry_Zone": "18 - 20",
-      "SL": 17,
-      "TP": 91,
-      "TP_1": 73,
-      "TP_2": 79,
-      "TP_3": 91,
-      "RR": "1:36.0",
-      "RR_Value": 36.0,
+      "SL": 14,
+      "TP": 106,
+      "TP_1": 86,
+      "TP_2": 92,
+      "TP_3": 106,
+      "RR": "1:17.4",
+      "RR_Value": 17.4,
       "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
-      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
+      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
+      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
       "Entry_Details": {
         "Entry_1": 20,
         "Entry_2": 19,
@@ -52,9 +114,9 @@
         "Pct_3": 30
       },
       "SMC_Details": {
-        "Trend_Bias": "BULLISH",
-        "Strong_Low": 18.0,
-        "Weak_High": 72.0,
+        "Trend_Bias": "NEUTRAL",
+        "Strong_Low": null,
+        "Weak_High": null,
         "OB_Count": 4,
         "FVG_Count": 106
       },
@@ -79,9 +141,9 @@
         "direction_1d": "NEUTRAL",
         "direction_1w": "NEUTRAL"
       },
-      "ranked_at": "2026-02-27T05:56:45.926231Z",
+      "ranked_at": "2026-02-27T10:47:05.965720Z",
       "data_points": 40,
-      "Rank": 1
+      "Rank": 2
     }
   ]
 }
