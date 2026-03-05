@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "timestamp": "2026-03-05T06:23:18.708222",
+  "timestamp": "2026-03-05T10:43:27.196709",
   "date": "2026-03-05",
   "total_saham": 1,
   "config": {
@@ -21,39 +21,39 @@
   "data": [
     {
       "No": 1,
-      "Emiten": "PRDA",
-      "Company_Name": "PT PRDA TBK",
-      "Close": 2490,
-      "MA50": 2390,
-      "Vol_Ratio": 2.43,
+      "Emiten": "BIPP",
+      "Company_Name": "PT BIPP TBK",
+      "Close": 78,
+      "MA50": 78,
+      "Vol_Ratio": 8.75,
       "ROE": "N/A",
       "DE": "N/A",
-      "Entry": 2340,
-      "Entry_Zone": "2240 - 2450",
-      "SL": 2220,
-      "TP": 3160,
-      "TP_1": 2550,
-      "TP_2": 2750,
-      "TP_3": 3160,
-      "RR": "1:6.8",
-      "RR_Value": 6.83,
+      "Entry": 72,
+      "Entry_Zone": "69 - 74",
+      "SL": 24,
+      "TP": 216,
+      "TP_1": 58,
+      "TP_2": 63,
+      "TP_3": 216,
+      "RR": "1:3.0",
+      "RR_Value": 3.0,
       "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
+      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
       "Entry_Details": {
-        "Entry_1": 2450,
-        "Entry_2": 2350,
-        "Entry_3": 2240,
+        "Entry_1": 74,
+        "Entry_2": 72,
+        "Entry_3": 69,
         "Pct_1": 20,
         "Pct_2": 50,
         "Pct_3": 30
       },
       "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 9,
-        "FVG_Count": 31
+        "Trend_Bias": "BULLISH",
+        "Strong_Low": 25.0,
+        "Weak_High": 57.0,
+        "OB_Count": 8,
+        "FVG_Count": 95
       }
     }
   ]
