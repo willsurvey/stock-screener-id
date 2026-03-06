@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "timestamp": "2026-03-06T05:57:57.467197",
+  "timestamp": "2026-03-06T10:46:28.959868",
   "date": "2026-03-06",
   "total_saham": 3,
   "config": {
@@ -21,48 +21,11 @@
   "data": [
     {
       "No": 1,
-      "Emiten": "KOTA",
-      "Company_Name": "PT KOTA TBK",
-      "Close": 64,
-      "MA50": 63,
-      "Vol_Ratio": 3.27,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 8,
-      "Entry_Zone": "5 - 10",
-      "SL": 5,
-      "TP": 60,
-      "TP_1": 48,
-      "TP_2": 52,
-      "TP_3": 60,
-      "RR": "1:17.3",
-      "RR_Value": 17.33,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
-      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
-      "Entry_Details": {
-        "Entry_1": 10,
-        "Entry_2": 8,
-        "Entry_3": 5,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "BULLISH",
-        "Strong_Low": 5.0,
-        "Weak_High": 47.0,
-        "OB_Count": 4,
-        "FVG_Count": 103
-      }
-    },
-    {
-      "No": 2,
       "Emiten": "PRDA",
       "Company_Name": "PT PRDA TBK",
       "Close": 2500,
       "MA50": 2390,
-      "Vol_Ratio": 2.99,
+      "Vol_Ratio": 3.29,
       "ROE": "N/A",
       "DE": "N/A",
       "Entry": 2340,
@@ -94,12 +57,49 @@
       }
     },
     {
+      "No": 2,
+      "Emiten": "ELPI",
+      "Company_Name": "PT ELPI TBK",
+      "Close": 1250,
+      "MA50": 1210,
+      "Vol_Ratio": 2.82,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 334,
+      "Entry_Zone": "326 - 344",
+      "SL": 306,
+      "TP": 488,
+      "TP_1": 394,
+      "TP_2": 424,
+      "TP_3": 488,
+      "RR": "1:5.5",
+      "RR_Value": 5.5,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
+      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
+      "Entry_Details": {
+        "Entry_1": 344,
+        "Entry_2": 336,
+        "Entry_3": 326,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "BULLISH",
+        "Strong_Low": 316.22342494419644,
+        "Weak_High": 385.6383025340545,
+        "OB_Count": 3,
+        "FVG_Count": 18
+      }
+    },
+    {
       "No": 3,
       "Emiten": "LAND",
       "Company_Name": "PT LAND TBK",
       "Close": 67,
       "MA50": 66,
-      "Vol_Ratio": 5.47,
+      "Vol_Ratio": 5.58,
       "ROE": "N/A",
       "DE": "N/A",
       "Entry": 65,
