@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-10T06:24:04.583055",
+  "timestamp": "2026-03-10T10:41:53.272180",
   "date": "2026-03-10",
-  "total_saham": 0,
+  "total_saham": 2,
   "config": {
     "strategy": "LuxAlgo Maximum SMC",
     "min_rr": 3.0,
@@ -18,5 +18,80 @@
     "ob_mitigation": true,
     "volatility_filter": true
   },
-  "data": []
+  "data": [
+    {
+      "No": 1,
+      "Emiten": "INPC",
+      "Company_Name": "PT INPC TBK",
+      "Close": 199,
+      "MA50": 190,
+      "Vol_Ratio": 5.17,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 151,
+      "Entry_Zone": "138 - 166",
+      "SL": 133,
+      "TP": 402,
+      "TP_1": 324,
+      "TP_2": 350,
+      "TP_3": 402,
+      "RR": "1:13.9",
+      "RR_Value": 13.94,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
+      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Entry_Details": {
+        "Entry_1": 166,
+        "Entry_2": 152,
+        "Entry_3": 138,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "NEUTRAL",
+        "Strong_Low": null,
+        "Weak_High": null,
+        "OB_Count": 13,
+        "FVG_Count": 56
+      }
+    },
+    {
+      "No": 2,
+      "Emiten": "SAME",
+      "Company_Name": "PT SAME TBK",
+      "Close": 348,
+      "MA50": 340,
+      "Vol_Ratio": 2.05,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 332,
+      "Entry_Zone": "320 - 348",
+      "SL": 268,
+      "TP": 540,
+      "TP_1": 434,
+      "TP_2": 468,
+      "TP_3": 540,
+      "RR": "1:3.2",
+      "RR_Value": 3.25,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
+      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Entry_Details": {
+        "Entry_1": 348,
+        "Entry_2": 334,
+        "Entry_3": 320,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "NEUTRAL",
+        "Strong_Low": null,
+        "Weak_High": null,
+        "OB_Count": 17,
+        "FVG_Count": 77
+      }
+    }
+  ]
 }
