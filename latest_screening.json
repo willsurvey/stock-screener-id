@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "timestamp": "2026-03-12T06:30:42.315552",
+  "timestamp": "2026-03-12T10:39:16.635234",
   "date": "2026-03-12",
   "total_saham": 1,
   "config": {
@@ -21,39 +21,39 @@
   "data": [
     {
       "No": 1,
-      "Emiten": "TOOL",
-      "Company_Name": "PT TOOL TBK",
-      "Close": 69,
-      "MA50": 66,
-      "Vol_Ratio": 2.07,
+      "Emiten": "TOTL",
+      "Company_Name": "PT TOTL TBK",
+      "Close": 1060,
+      "MA50": 1050,
+      "Vol_Ratio": 1.67,
       "ROE": "N/A",
       "DE": "N/A",
-      "Entry": 54,
-      "Entry_Zone": "50 - 59",
-      "SL": 52,
-      "TP": 118,
-      "TP_1": 96,
-      "TP_2": 103,
-      "TP_3": 118,
-      "RR": "1:32.0",
-      "RR_Value": 32.0,
+      "Entry": 328,
+      "Entry_Zone": "308 - 354",
+      "SL": 318,
+      "TP": 985,
+      "TP_1": 795,
+      "TP_2": 855,
+      "TP_3": 985,
+      "RR": "1:65.7",
+      "RR_Value": 65.7,
       "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
+      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
       "Entry_Details": {
-        "Entry_1": 59,
-        "Entry_2": 54,
-        "Entry_3": 50,
+        "Entry_1": 354,
+        "Entry_2": 330,
+        "Entry_3": 308,
         "Pct_1": 20,
         "Pct_2": 50,
         "Pct_3": 30
       },
       "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 2,
-        "FVG_Count": 4
+        "Trend_Bias": "BULLISH",
+        "Strong_Low": 432.62025026807595,
+        "Weak_High": 778.3544127682605,
+        "OB_Count": 17,
+        "FVG_Count": 64
       }
     }
   ]
