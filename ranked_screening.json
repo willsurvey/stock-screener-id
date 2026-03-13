@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-13T05:53:59.031144Z",
+  "timestamp": "2026-03-13T10:39:30.424046Z",
   "date": "2026-03-13",
-  "time": "05.53 WIB",
+  "time": "10.39 WIB",
   "total_saham": 0,
   "config": {
     "strategy": "LuxAlgo Maximum SMC + Empirical Hit Rate Ranking",
@@ -14,12 +14,12 @@
     "foreign_threshold": 10000000000
   },
   "summary": {
-    "total_screened": 0,
+    "total_screened": 1,
     "total_ranked": 0,
     "high_confidence": 0,
     "moderate_confidence": 0,
     "low_confidence": 0,
-    "failed": 0
+    "failed": 1
   },
   "stocks": []
 }
