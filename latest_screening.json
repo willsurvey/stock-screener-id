@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-13T05:53:39.048348",
+  "timestamp": "2026-03-13T10:39:05.582596",
   "date": "2026-03-13",
-  "total_saham": 0,
+  "total_saham": 1,
   "config": {
     "strategy": "LuxAlgo Maximum SMC",
     "min_rr": 3.0,
@@ -18,5 +18,43 @@
     "ob_mitigation": true,
     "volatility_filter": true
   },
-  "data": []
+  "data": [
+    {
+      "No": 1,
+      "Emiten": "OILS",
+      "Company_Name": "PT OILS TBK",
+      "Close": 228,
+      "MA50": 218,
+      "Vol_Ratio": 2.85,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 206,
+      "Entry_Zone": "192 - 224",
+      "SL": 162,
+      "TP": 412,
+      "TP_1": 332,
+      "TP_2": 358,
+      "TP_3": 412,
+      "RR": "1:4.7",
+      "RR_Value": 4.68,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
+      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Entry_Details": {
+        "Entry_1": 224,
+        "Entry_2": 208,
+        "Entry_3": 192,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "NEUTRAL",
+        "Strong_Low": null,
+        "Weak_High": null,
+        "OB_Count": 5,
+        "FVG_Count": 9
+      }
+    }
+  ]
 }
