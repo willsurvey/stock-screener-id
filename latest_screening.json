@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-12T10:39:16.635234",
-  "date": "2026-03-12",
-  "total_saham": 1,
+  "timestamp": "2026-03-13T05:53:39.048348",
+  "date": "2026-03-13",
+  "total_saham": 0,
   "config": {
     "strategy": "LuxAlgo Maximum SMC",
     "min_rr": 3.0,
@@ -18,43 +18,5 @@
     "ob_mitigation": true,
     "volatility_filter": true
   },
-  "data": [
-    {
-      "No": 1,
-      "Emiten": "TOTL",
-      "Company_Name": "PT TOTL TBK",
-      "Close": 1060,
-      "MA50": 1050,
-      "Vol_Ratio": 1.67,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 328,
-      "Entry_Zone": "308 - 354",
-      "SL": 318,
-      "TP": 985,
-      "TP_1": 795,
-      "TP_2": 855,
-      "TP_3": 985,
-      "RR": "1:65.7",
-      "RR_Value": 65.7,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
-      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
-      "Entry_Details": {
-        "Entry_1": 354,
-        "Entry_2": 330,
-        "Entry_3": 308,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "BULLISH",
-        "Strong_Low": 432.62025026807595,
-        "Weak_High": 778.3544127682605,
-        "OB_Count": 17,
-        "FVG_Count": 64
-      }
-    }
-  ]
+  "data": []
 }
