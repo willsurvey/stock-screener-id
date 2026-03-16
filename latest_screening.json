@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-16T06:22:55.193413",
+  "timestamp": "2026-03-16T10:39:14.947712",
   "date": "2026-03-16",
-  "total_saham": 0,
+  "total_saham": 1,
   "config": {
     "strategy": "LuxAlgo Maximum SMC",
     "min_rr": 3.0,
@@ -18,5 +18,43 @@
     "ob_mitigation": true,
     "volatility_filter": true
   },
-  "data": []
+  "data": [
+    {
+      "No": 1,
+      "Emiten": "PRDA",
+      "Company_Name": "PT PRDA TBK",
+      "Close": 2480,
+      "MA50": 2400,
+      "Vol_Ratio": 1.63,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 2340,
+      "Entry_Zone": "2240 - 2450",
+      "SL": 2220,
+      "TP": 3290,
+      "TP_1": 2650,
+      "TP_2": 2860,
+      "TP_3": 3290,
+      "RR": "1:7.9",
+      "RR_Value": 7.92,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
+      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Entry_Details": {
+        "Entry_1": 2450,
+        "Entry_2": 2350,
+        "Entry_3": 2240,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "NEUTRAL",
+        "Strong_Low": null,
+        "Weak_High": null,
+        "OB_Count": 9,
+        "FVG_Count": 31
+      }
+    }
+  ]
 }
