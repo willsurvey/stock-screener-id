@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-24T10:41:26.710886",
-  "date": "2026-03-24",
-  "total_saham": 0,
+  "timestamp": "2026-03-25T06:29:44.589618",
+  "date": "2026-03-25",
+  "total_saham": 1,
   "config": {
     "strategy": "LuxAlgo Maximum SMC",
     "min_rr": 3.0,
@@ -18,5 +18,43 @@
     "ob_mitigation": true,
     "volatility_filter": true
   },
-  "data": []
+  "data": [
+    {
+      "No": 1,
+      "Emiten": "BSSR",
+      "Company_Name": "PT BSSR TBK",
+      "Close": 4060,
+      "MA50": 3930,
+      "Vol_Ratio": 2.62,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 2410,
+      "Entry_Zone": "2340 - 2490",
+      "SL": 2360,
+      "TP": 5000,
+      "TP_1": 4040,
+      "TP_2": 4350,
+      "TP_3": 5000,
+      "RR": "1:51.8",
+      "RR_Value": 51.8,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 📈 BOS + 🟦 OB + ⚡ FVG + Trend: BULLISH",
+      "Bias_Description": "Follow Trend Daily & 4H (Breakout Phase)",
+      "Entry_Details": {
+        "Entry_1": 2490,
+        "Entry_2": 2420,
+        "Entry_3": 2340,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "BULLISH",
+        "Strong_Low": 3503.535697956425,
+        "Weak_High": 3958.9823882574424,
+        "OB_Count": 6,
+        "FVG_Count": 103
+      }
+    }
+  ]
 }
