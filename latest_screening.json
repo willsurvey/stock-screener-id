@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "timestamp": "2026-03-25T06:29:44.589618",
+  "timestamp": "2026-03-25T10:39:20.281650",
   "date": "2026-03-25",
   "total_saham": 1,
   "config": {
@@ -23,9 +23,9 @@
       "No": 1,
       "Emiten": "BSSR",
       "Company_Name": "PT BSSR TBK",
-      "Close": 4060,
+      "Close": 4110,
       "MA50": 3930,
-      "Vol_Ratio": 2.62,
+      "Vol_Ratio": 3.6,
       "ROE": "N/A",
       "DE": "N/A",
       "Entry": 2410,
@@ -52,7 +52,7 @@
         "Trend_Bias": "BULLISH",
         "Strong_Low": 3503.535697956425,
         "Weak_High": 3958.9823882574424,
-        "OB_Count": 6,
+        "OB_Count": 5,
         "FVG_Count": 103
       }
     }
