@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-27T10:41:13.120800",
-  "date": "2026-03-27",
-  "total_saham": 1,
+  "timestamp": "2026-03-30T06:25:04.854201",
+  "date": "2026-03-30",
+  "total_saham": 0,
   "config": {
     "strategy": "LuxAlgo Maximum SMC",
     "min_rr": 3.0,
@@ -18,43 +18,5 @@
     "ob_mitigation": true,
     "volatility_filter": true
   },
-  "data": [
-    {
-      "No": 1,
-      "Emiten": "GMFI",
-      "Company_Name": "PT GMFI TBK",
-      "Close": 70,
-      "MA50": 67,
-      "Vol_Ratio": 4.52,
-      "ROE": "N/A",
-      "DE": "N/A",
-      "Entry": 63,
-      "Entry_Zone": "59 - 68",
-      "SL": 51,
-      "TP": 116,
-      "TP_1": 94,
-      "TP_2": 101,
-      "TP_3": 116,
-      "RR": "1:4.4",
-      "RR_Value": 4.42,
-      "Status": "✅ READY",
-      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
-      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
-      "Entry_Details": {
-        "Entry_1": 68,
-        "Entry_2": 64,
-        "Entry_3": 59,
-        "Pct_1": 20,
-        "Pct_2": 50,
-        "Pct_3": 30
-      },
-      "SMC_Details": {
-        "Trend_Bias": "NEUTRAL",
-        "Strong_Low": null,
-        "Weak_High": null,
-        "OB_Count": 8,
-        "FVG_Count": 62
-      }
-    }
-  ]
+  "data": []
 }
