@@ -1,8 +1,8 @@
 {
   "status": "success",
-  "timestamp": "2026-03-30T06:25:04.854201",
+  "timestamp": "2026-03-30T10:46:15.309634",
   "date": "2026-03-30",
-  "total_saham": 0,
+  "total_saham": 1,
   "config": {
     "strategy": "LuxAlgo Maximum SMC",
     "min_rr": 3.0,
@@ -18,5 +18,43 @@
     "ob_mitigation": true,
     "volatility_filter": true
   },
-  "data": []
+  "data": [
+    {
+      "No": 1,
+      "Emiten": "AALI",
+      "Company_Name": "PT AALI TBK",
+      "Close": 7550,
+      "MA50": 7500,
+      "Vol_Ratio": 1.57,
+      "ROE": "N/A",
+      "DE": "N/A",
+      "Entry": 7000,
+      "Entry_Zone": "6775 - 7300",
+      "SL": 6425,
+      "TP": 10200,
+      "TP_1": 8225,
+      "TP_2": 8875,
+      "TP_3": 10200,
+      "RR": "1:5.6",
+      "RR_Value": 5.57,
+      "Status": "✅ READY",
+      "Info": "Fundamental: SKIP (Technical Only) | 🟦 OB + ⚡ FVG + Trend: NEUTRAL",
+      "Bias_Description": "Follow Trend Daily & 4H (Recovery Bullish)",
+      "Entry_Details": {
+        "Entry_1": 7300,
+        "Entry_2": 7025,
+        "Entry_3": 6775,
+        "Pct_1": 20,
+        "Pct_2": 50,
+        "Pct_3": 30
+      },
+      "SMC_Details": {
+        "Trend_Bias": "NEUTRAL",
+        "Strong_Low": null,
+        "Weak_High": null,
+        "OB_Count": 25,
+        "FVG_Count": 87
+      }
+    }
+  ]
 }
